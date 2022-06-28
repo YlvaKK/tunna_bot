@@ -1,8 +1,9 @@
 import discord
+import re
 
 client = discord.Client()
 
-emoji_id = "<:hjelp:991400294095265863>" 
+emoji_id = "<:hjelp:705824146046844982>" 
 triggers = {"bandy", "boll", "basket", "hockey", "mac", "macos", "linux", "ubuntu", "destiny", "elden ring", "kaffe", "stockholm", "njuta av livet"}
 response = ""
 
@@ -25,4 +26,4 @@ async def on_message(message):
 
 
 
-client.run('OTkxMzc2MTU0MDc2Mzg5Mzk2.GSoCWh.vB-tuitkslc0nj3olNUbASwpHhJhf66DPwTbIQ')
+client.run(os.environ['secret'])
