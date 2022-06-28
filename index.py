@@ -5,7 +5,7 @@ client = discord.Client()
 
 emoji_id = "<:hjelp:705824146046844982>" 
 triggers = {"bandy", "boll", "basket", "hockey", "mac", "macos", "linux", "ubuntu", "destiny", "elden ring", "kaffe", "stockholm", "njuta av livet", "paradox"}
-white_boy_rpg = {"witcher", "fallout","deus ex", "vampire: the masquerade", "divinity", "dragon age", "Star Wars: Knights"}
+white_boy_rpg = {"witcher", "fallout","deus ex", "vampire: the masquerade", "divinity", "dragon age", "star wars: knights"}
 response = ""
 
 @client.event
