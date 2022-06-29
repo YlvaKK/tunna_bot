@@ -21,6 +21,8 @@ async def on_message(message):
     if message.channel.id == 545178588996173826:
         return
 
+    if message.content
+
     randomNumber = randint(500, 1500)
     if randomNumber == 1337:
         words = message.content.split(' ')
