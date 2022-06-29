@@ -5,7 +5,7 @@ import os
 client = discord.Client()
 
 emoji_id = "<:hjelp:705824146046844982>" 
-triggers = {"bandy", "boll", "basket", "hockey", "macos", "mac", "linux", "ubuntu", "destiny", "elden ring", "kaffe", "stockholm", "njuta av livet", "paradox", "träning"}
+triggers = {"bandy", "boll", "basket", "hockey", "macos", "mac", "linux", "ubuntu", "destiny", "elden ring", "kaffe", "stockholm", "njuta av livet", "paradox", "träning", "game of thrones"}
 white_boy_rpg = {"witcher", "fallout", "new vegas", "deus ex", "vampire: the masquerade", "divinity", "dragon age", "star wars: knights"}
 response = ""
 
@@ -16,6 +16,9 @@ async def on_ready():
 @client.event
 async def on_message(message):
     if message.author == client.user:
+        return
+
+    if message.channel.id == "766569999199764530":
         return
 
     randomNumber = randint(500, 1500)
