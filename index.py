@@ -18,7 +18,7 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.channel.id == "766569999199764530":
+    if message.channel.id == 545178588996173826:
         return
 
     randomNumber = randint(500, 1500)
