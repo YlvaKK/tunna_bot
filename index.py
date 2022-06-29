@@ -5,7 +5,7 @@ import os
 client = discord.Client()
 
 emoji_id = "<:hjelp:705824146046844982>" 
-triggers = {"bandy", "boll", "basket", "hockey", "mac", "macos", "linux", "ubuntu", "destiny", "elden ring", "kaffe", "stockholm", "njuta av livet", "paradox", "träning"}
+triggers = {"bandy", "boll", "basket", "hockey", "macos", "mac", "linux", "ubuntu", "destiny", "elden ring", "kaffe", "stockholm", "njuta av livet", "paradox", "träning"}
 white_boy_rpg = {"witcher", "fallout", "new vegas", "deus ex", "vampire: the masquerade", "divinity", "dragon age", "star wars: knights"}
 response = ""
 
@@ -18,7 +18,7 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    randomNumber = randint(0, 5000)
+    randomNumber = randint(500, 1500)
     if randomNumber == 1337:
         words = message.content.split(' ')
         num_words = len(words)
@@ -36,5 +36,6 @@ async def on_message(message):
         for trigger in white_boy_rpg:
             if trigger in message.content.lower():
                 await message.channel.send('{}. {}.'.format("White boy RPG", emoji_id))
+                break
 
 client.run(os.environ['secret'])
