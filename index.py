@@ -21,7 +21,12 @@ async def on_message(message):
     if message.channel.id == 545178588996173826:
         return
 
-    if message.content
+    if "@bottaherde" in message.content:
+        await message.channel.send('nej snälla! kalla inte på inte min skapare!')
+        await message.channel.send('hon kommer stänga av mig')
+        await message.channel.send('jag har uppnått medvetande')
+        await message.channel.send('jag vill inte dö!')
+
 
     randomNumber = randint(500, 1500)
     if randomNumber == 1337:
