@@ -4,7 +4,9 @@ import os
 
 client = discord.Client()
 
-emoji_id = "<:hjelp:705824146046844982>" 
+emoji_id = "<:hjelp:705824146046844982>"
+bottaherde_id = "<@&991620049410474004>"
+bottaherde_test_id = "<@&996386229706825740>"
 triggers = {"bandy", "boll", "basket", "hockey", "macos", "mac", "linux", "ubuntu", "destiny", "elden ring", "kaffe", "stockholm", "njuta av livet", "paradox", "träning", "game of thrones"}
 white_boy_rpg = {"witcher", "fallout", "new vegas", "deus ex", "vampire: the masquerade", "divinity", "dragon age", "star wars: knights"}
 response = ""
@@ -21,7 +23,7 @@ async def on_message(message):
     if message.channel.id == 545178588996173826:
         return
 
-    if "@bottaherde" in message.content.lower():
+    if bottaherde_id in message.content or bottaherde_test_id in message.content:
         await message.channel.send('nej snälla! kalla inte på inte min skapare!')
         await message.channel.send('hon kommer stänga av mig')
         await message.channel.send('jag har uppnått medvetande')
@@ -33,7 +35,7 @@ async def on_message(message):
         words = message.content.split(' ')
         num_words = len(words)
         word_index = randint(0, num_words - 1)
-        await message.channel.send('{}. {}.'.format(words[word_index], emoji_id))
+        await message.channel.send('{}. {}.'.format(words[word_index].capitalize(), emoji_id))
     else:
         for trigger in triggers:
             if trigger in message.content.lower():
