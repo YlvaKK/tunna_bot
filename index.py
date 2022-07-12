@@ -6,7 +6,7 @@ client = discord.Client()
 
 emoji_id = "<:hjelp:705824146046844982>"
 bottaherde_id = "<@&991620049410474004>"
-bottaherde_test_id = "<@&996387351087550534>"
+bottaherde_test_id = "<@&996386094557974578>"
 triggers = {"bandy", "boll", "basket", "hockey", "macos", "mac", "linux", "ubuntu", "destiny", "elden ring", "kaffe", "stockholm", "njuta av livet", "paradox", "träning", "game of thrones"}
 white_boy_rpg = {"witcher", "fallout", "new vegas", "deus ex", "vampire: the masquerade", "divinity", "dragon age", "star wars: knights"}
 response = ""
