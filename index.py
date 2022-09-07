@@ -36,7 +36,7 @@ async def on_message(message):
         num_words = len(words)
         word_index = randint(0, num_words - 1)
         await message.channel.send('{}. {}.'.format(words[word_index].capitalize(), emoji_id))
-    else:
+    """ else:
         for trigger in triggers:
             if trigger in message.content.lower():
                 if trigger == "boll":
@@ -48,6 +48,6 @@ async def on_message(message):
         for trigger in white_boy_rpg:
             if trigger in message.content.lower():
                 await message.channel.send('{}. {}.'.format("White boy RPG", emoji_id))
-                break
+                break """
 
 client.run(os.environ['secret'])
