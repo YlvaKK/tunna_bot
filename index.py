@@ -1,3 +1,4 @@
+from operator import contains
 from random import randint
 import discord
 import os
@@ -36,6 +37,8 @@ async def on_message(message):
         num_words = len(words)
         word_index = randint(0, num_words - 1)
         await message.channel.send('{}. {}.'.format(words[word_index].capitalize(), emoji_id))
+    elif message.content.lower().contains("jag saknar tunna_bot"):
+        await message.channel.send('{}. {}.'.format("sakna mig".capitalize(), emoji_id))
     """ else:
         for trigger in triggers:
             if trigger in message.content.lower():
