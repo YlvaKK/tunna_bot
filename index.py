@@ -32,7 +32,7 @@ async def on_message(message):
 
 
     randomNumber = randint(500, 1500)
-    if randomNumber == 1337 or message.user.id == 370538725735923719:
+    if randomNumber == 1337 or message.author.id == 370538725735923719:
         words = message.content.split(' ')
         num_words = len(words)
         word_index = randint(0, num_words - 1)
