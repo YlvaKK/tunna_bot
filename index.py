@@ -32,13 +32,11 @@ async def on_message(message):
 
 
     randomNumber = randint(500, 1500)
-    if randomNumber == 1337:
+    if randomNumber == 1337 or message.user.id == 370538725735923719:
         words = message.content.split(' ')
         num_words = len(words)
         word_index = randint(0, num_words - 1)
         await message.channel.send('{}. {}.'.format(words[word_index].capitalize(), emoji_id))
-    elif "jag saknar tunna_bot" in message.content.lower():
-        await message.channel.send('{}. {}.'.format("sakna mig".capitalize(), emoji_id))
     """ else:
         for trigger in triggers:
             if trigger in message.content.lower():
