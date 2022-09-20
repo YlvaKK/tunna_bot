@@ -32,12 +32,12 @@ async def on_message(message):
 
 
     randomNumber = randint(500, 1500)
-    if randomNumber == 1337 or message.author.id == 370538725735923719:
+    if randomNumber == 1337:
         words = message.content.split(' ')
         num_words = len(words)
         word_index = randint(0, num_words - 1)
         await message.channel.send('{}. {}.'.format(words[word_index].capitalize(), emoji_id))
-    """ else:
+    else:
         for trigger in triggers:
             if trigger in message.content.lower():
                 if trigger == "boll":
@@ -49,6 +49,6 @@ async def on_message(message):
         for trigger in white_boy_rpg:
             if trigger in message.content.lower():
                 await message.channel.send('{}. {}.'.format("White boy RPG", emoji_id))
-                break """
+                break
 
 client.run(os.environ['secret'])
