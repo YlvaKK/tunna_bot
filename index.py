@@ -2,6 +2,7 @@ from operator import contains
 from random import randint
 import discord
 import os
+import time
 
 client = discord.Client()
 
@@ -10,6 +11,7 @@ bottaherde_id = "<@&991620049410474004>"
 bottaherde_test_id = "<@&996386094557974578>"
 triggers = {"bandy", "boll", "basket", "hockey", "macos", "mac", "linux", "ubuntu", "destiny", "elden ring", "kaffe", "stockholm", "njuta av livet", "paradox", "träning", "game of thrones"}
 white_boy_rpg = {"witcher", "fallout", "new vegas", "deus ex", "vampire: the masquerade", "divinity", "dragon age", "star wars: knights"}
+timeout_command = "käften botjävel"
 response = ""
 
 @client.event
@@ -30,6 +32,9 @@ async def on_message(message):
         await message.channel.send('jag har uppnått medvetande')
         await message.channel.send('jag vill inte dö!')
 
+    if timeout_command in message.content:
+        await message.channel.send('Timeout Initierad. Jag återkommer om en timme.')
+        time.sleep(60*60)
 
     randomNumber = randint(500, 1500)
     if randomNumber == 1337:
